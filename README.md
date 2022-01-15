@@ -27,6 +27,7 @@ insert into users (id, email, password) values (9, "me09@example.com", "changeme
 
 ```
 
+```
 deno-mysql-bench> deno run --allow-net ./deno/index.ts
 INFO connecting localhost:3306
 INFO connected to localhost:3306
@@ -34,3 +35,4 @@ default: 7402ms
 INFO close connection
 deno-mysql-bench> node node/index.js
 default: 996.609ms
+```
