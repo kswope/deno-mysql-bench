@@ -28,11 +28,17 @@ insert into users (id, email, password) values (9, "me09@example.com", "changeme
 ```
 
 ```
-deno-mysql-bench> deno run --allow-net ./deno/index.ts
+bash-3.2$ node node/index.js
+time: 1.115s
+query count: 10000
+bash-3.2$ node node/index2.js
+time: 745.972ms
+query count: 10000
+bash-3.2$ deno run --allow-net ./deno/index.ts
+Check file:///Users/kevin/Development/deno-mysql-bench/deno/index.ts
 INFO connecting localhost:3306
 INFO connected to localhost:3306
-default: 7402ms
+time: 7064ms
+query count: 10000
 INFO close connection
-deno-mysql-bench> node node/index.js
-default: 996.609ms
 ```

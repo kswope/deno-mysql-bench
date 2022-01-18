@@ -1,4 +1,4 @@
-import * as mysql from "promise-mysql";
+import * as mysql from "mysql2/promise";
 import assert from "assert/strict";
 
 async function main() {
@@ -13,7 +13,7 @@ async function main() {
   console.time("time");
   let index = 0;
   for (; index < 10_000; index++) {
-    let rows = await pool.query("select * from users");
+    let [rows] = await pool.query("select * from users");
     assert(rows.length === 9, "did query work???");
   }
   console.timeEnd("time");
