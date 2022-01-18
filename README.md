@@ -28,10 +28,10 @@ insert into users (id, email, password) values (9, "me09@example.com", "changeme
 ```
 
 ```
-bash-3.2$ node node/index.js
+bash-3.2$ node node/index.js # using promise-mysql
 time: 1.115s
 query count: 10000
-bash-3.2$ node node/index2.js
+bash-3.2$ node node/index2.js # using mysql2
 time: 745.972ms
 query count: 10000
 bash-3.2$ deno run --allow-net ./deno/index.ts
