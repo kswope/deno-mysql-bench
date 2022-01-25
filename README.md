@@ -15,15 +15,15 @@ CREATE TABLE `users` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
-insert into users (id, email, password) values (1, "me01@example.com", "changeme");
-insert into users (id, email, password) values (2, "me02@example.com", "changeme");
-insert into users (id, email, password) values (3, "me03@example.com", "changeme");
-insert into users (id, email, password) values (4, "me04@example.com", "changeme");
-insert into users (id, email, password) values (5, "me05@example.com", "changeme");
-insert into users (id, email, password) values (6, "me06@example.com", "changeme");
-insert into users (id, email, password) values (7, "me07@example.com", "changeme");
-insert into users (id, email, password) values (8, "me08@example.com", "changeme");
-insert into users (id, email, password) values (9, "me09@example.com", "changeme");
+insert into users (id, email, password) values (1, 'me01@example.com', 'changeme');
+insert into users (id, email, password) values (2, 'me02@example.com', 'changeme');
+insert into users (id, email, password) values (3, 'me03@example.com', 'changeme');
+insert into users (id, email, password) values (4, 'me04@example.com', 'changeme');
+insert into users (id, email, password) values (5, 'me05@example.com', 'changeme');
+insert into users (id, email, password) values (6, 'me06@example.com', 'changeme');
+insert into users (id, email, password) values (7, 'me07@example.com', 'changeme');
+insert into users (id, email, password) values (8, 'me08@example.com', 'changeme');
+insert into users (id, email, password) values (9, 'me09@example.com', 'changeme');
 
 ```
 
@@ -41,4 +41,7 @@ INFO connected to localhost:3306
 time: 7064ms
 query count: 10000
 INFO close connection
+bash-3.2$ deno run --allow-net ./deno/index_postgres.ts
+time: 2060ms
+query count: 10000
 ```
